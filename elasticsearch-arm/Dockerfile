@@ -1,4 +1,4 @@
-FROM scaleway/java:arm64-latest
+FROM openjdk:8u332-oraclelinux7
 
 ENV GOSU_VERSION 1.14
 RUN set -x \

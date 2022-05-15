@@ -1,13 +1,7 @@
 FROM scaleway/java:armhf-latest
 
 ENV GOSU_VERSION 1.14
-RUN set -x \
-	&& wget -O /usr/local/bin/gosu "http://github.com/tianon/gosu/releases/download/1.14/gosu-armhf" \
-	&& wget -O /usr/local/bin/gosu.asc "http://github.com/tianon/gosu/releases/download/1.14/gosu-armhf.asc" \
-	&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 \
-	&& gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu \
-	&& chmod +x /usr/local/bin/gosu \
-	&& gosu nobody true
+RUN wget -O /usr/local/bin/gosu "http://github.com/tianon/gosu/releases/download/1.14/gosu-armhf" && wget -O /usr/local/bin/gosu.asc "http://github.com/tianon/gosu/releases/download/1.14/gosu-armhf.asc" && gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 && gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu && chmod +x /usr/local/bin/gosu && gosu nobody true
 
 RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys 46095ACC8548582C1A2699A9D27D666CD88E42B4
 

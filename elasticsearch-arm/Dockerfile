@@ -1,6 +1,6 @@
 FROM scaleway/java:armhf-latest
 
-ENV GOSU_VERSION 1.7
+ENV GOSU_VERSION 1.14
 RUN set -x \
 	&& wget -O /usr/local/bin/gosu "http://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture)" \
 	&& wget -O /usr/local/bin/gosu.asc "http://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture).asc" \

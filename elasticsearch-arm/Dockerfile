@@ -13,8 +13,8 @@ RUN set -x \
 
 RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys 46095ACC8548582C1A2699A9D27D666CD88E42B4
 
-ENV ELASTICSEARCH_MAJOR 2.3
-ENV ELASTICSEARCH_VERSION 2.3.3
+ENV ELASTICSEARCH_MAJOR 2.4.0
+ENV ELASTICSEARCH_VERSION 2.4.0
 
 RUN cd /tmp \
   && wget -q https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-${ELASTICSEARCH_VERSION}.deb

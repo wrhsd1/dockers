@@ -29,3 +29,4 @@ jobs:
           platforms: linux/arm64,linux/amd64
           push: true
           tags: wrhsd/elasticsearch-2.4
+          

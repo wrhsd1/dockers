@@ -28,4 +28,4 @@ jobs:
           files: elasticsearch-arm/Dockerfile
           platforms: linux/arm64,linux/amd64
           push: true
-          tags: wrhsd/els:latest
+          tags: wrhsd/elasticsearch:2.4
